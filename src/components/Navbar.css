@@ -1,0 +1,53 @@
+.navbar{  
+      display: flex;
+      height: 70px;
+      background-color: #111111; 
+      position: sticky; 
+}
+.arow{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+.icon1{
+      width: 30px;
+      height: 30px;
+      background-color: aliceblue;
+     
+}
+.icon2{
+      width: 30px;
+      height: 30px;
+      background-color: aliceblue;
+     
+}
+ .navbar .btn{
+     
+      
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      
+}
+
+.Signup{
+      
+      color: #b2b2b2;;
+       font-weight: bolder;
+       font-size: 25px;
+       padding: 14px;
+}
+
+.Login{
+
+      font-size: larger;
+      font-weight: bolder;
+      background-color: width(246, 241, 241);
+      height: 50px;
+      width: 100px;
+     border-top-left-radius: 20px;
+     border-bottom-left-radius: 20px;
+     border-top-right-radius: 20px;
+     border-bottom-right-radius: 20px;
+};

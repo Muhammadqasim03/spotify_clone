@@ -1,0 +1,50 @@
+.auth {
+  padding-top: 30px;
+}
+h1 {
+  color: white;
+  font-size: medium;
+  /* font-weight: 400; */
+  font-weight: bold;
+  margin-top: 5px;
+}
+.auth input {
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 9px;
+  color: white;
+  background-color: black;
+  width: 270px;
+}
+.password {
+  position: relative;
+  right: 50px;
+}
+.loginbtn {
+  padding: 12px;
+
+  margin: 12px;
+
+  background-color: green;
+
+  border-radius: 20px;
+  width: 180px;
+  position: relative;
+  left: 160px;
+}
+.loginbtn button {
+  outline: none;
+  border: none;
+  color: black;
+  background-color: green;
+  font-weight: bolder;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+}
+h1 {
+  position: relative;
+  right: 13px;
+}

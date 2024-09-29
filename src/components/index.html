@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar{
+    background: #030303;
+    width: 310px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 800px;
+    padding: 10px;
+}
+.sidebar-menu{
+    background: #111111;
+    border-radius: 10px;
+    padding: 10px 8px;
+    margin-bottom: 8px;
+}
+
+.sidebar-menu .logo{
+    width: 120px;
+}
+
+.sidebar-menu .logo img{
+    width: 100%;
+}
+
+.sidebar-menu ul{
+    list-style: none;
+}
+
+.sidebar-menu ul li{
+   padding-top: 10px;
+   padding-bottom: 23px;
+}
+
+.sidebar-menu ul li a{
+    text-decoration: none; /list meins se underline hatane ke liye/
+    color: #c4c4c4;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 16px;
+}
+
+.sidebar-menu ul li a:hover{
+    text-decoration: none; /list meins se underline hatane ke liye/
+    color: #ffffff;
+}
+
+.sidebar-menu ul li a i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.library::after{ /+ is the last child of the selected element/
+    content: '+';
+    float: right;
+    padding-right: 20px;
+    border-radius: 50%;
+    font-size: 20px;
+
+}
+
+.create-playlist{
+    background: #222121;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+.sidebar-scroll{
+    height: 32px;
+    overflow: auto;
+}
+
+.sidebar-scroll::-webkit-scrollbar{ /to style the whole scrollbar/
+    background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb{ /to style the draggable scroll/
+    background: transparent;
+    width: 2px;
+}
+
+.sidebar-scroll:hover::-webkit-scrollbar-thumb{
+    background: #5c5b5b;
+    width: 2px;
+}
+
+.create-playlist h4{
+    color: white;
+    font-size: 16px;
+    margin: 8px 0px;
+}
+
+.create-playlist p{
+    color: white;
+    font-size: 12px;
+    margin: 15px 0px;
+}
+
+.create-playlist button{
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+.privacy ul li a{
+    text-decoration: none;
+    color: #949393;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0 3px;
+}
+
+.privacy ul{
+    list-style: none;
+    margin-top: 17px;
+}
+
+.privacy ul li{
+    padding: 0 12px;
+    padding-bottom: 8px;
+}
+
+.eng-btn{
+    padding: 20px 12px;
+}
+
+.eng-btn button{
+    padding: 7px 10px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: white;
+    border: 1px solid #818080;
+    border-radius: 20px;
+}
+
+.eng-btn button:hover{
+    padding: 8px 11px;
+    border: 1px solid white;
+}
+
+.eng-btn span{
+    color: white;
+    font-weight: 600;
+}
+
+.eng-btn span i{
+    padding-right: 2px;
+}
+
+/Main Section/
+
+.main-section{
+    margin-left: 310px;
+    background: #212121;
+    opacity: 0.9;
+    height: 95vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.main-section .top-navbar{
+    padding: 10px 30px;
+    background: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.main-section .top-navbar button{
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: 0;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.main-section .top-navbar .prev-btn button i{
+    background: rgba(0, 0, 0, .7);
+    opacity: 0.6;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 22px;
+    width: 35px;
+}
+
+.top-navbar .login-btn .sign-up{
+    color: #b2b2b2;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 25px;
+}
+
+.top-navbar .login-btn .sign-up:hover{
+    color: white;
+}
+
+.top-navbar .login-btn .login{
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    background: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.top-navbar .login-btn .login:hover{
+    color: #818080;
+
+}
+
+.spotify-playlist h2{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.spotify-playlist .card{
+    display: flex;
+    gap: 1px;
+    overflow: hidden;
+    padding: 0px 10px;
+}
+
+.spotify-playlist .card .item{
+    width: 250px;
+    min-width: 185px;
+    background-color: #212121;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.spotify-playlist .card .item:hover{
+    background-color: #3d3c3c;
+}
+
+.spotify-playlist .card .item img{
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.spotify-playlist .item h4{
+    color: white;
+}
+
+.spotify-playlist .item p{
+    color: #8f8e8e;
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+.spotify-playlist .item p:hover{
+    text-decoration: underline;
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+.spotify-playlist .play-btn{
+    position: relative;     /relative to its normal position/
+}
+.spotify-playlist .play-btn i{
+    position: absolute;     /so that play button text ke upar ajaey/
+    background: #1db954;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 12px 15px;
+    right: 4px;     /Postioning of the play button/
+    top: -43px;
+    opacity: 0;     /to hide the play button/
+    transition-duration: 0.35s;
+}
+
+.spotify-playlist .card .item:hover .play-btn i{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.footer-section{
+    padding: 0 20px;
+    padding-top: 40px;
+}
+
+.footer-section .footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-section .footer .footer-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-section .footer .footer-links .footer-column{
+    margin: 0px 10px;
+}
+
+.footer-section .footer .footer-links div{
+    color: white;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.footer-section .footer .footer-links ul li{
+    list-style: none;
+    margin: 6px 0;
+}
+
+.footer-section .footer .footer-links ul li a{
+    text-decoration: none;
+    color: #969393;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-section .footer .footer-links ul li a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.footer .social-links i{
+    color: white;
+    background: #353434;
+    padding: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.footer .social-links i:hover{
+    background: #636262;
+}
+
+hr{
+    margin: 20px 30px;   
+    border: 1px solid #616060;
+}
+
+.copyright{
+    padding: 20px 30px;
+    color: #969393;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+/Artist Styling/
+
+.popular-artists h2{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.popular-artists .card{
+    display: flex;
+    gap: 1px;
+    overflow: hidden;
+    padding: 0px 10px;
+}
+
+.popular-artists .card .item{
+    width: 250px;
+    min-width: 185px;
+    background-color: #212121;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.popular-artists .card .item:hover{
+    background-color: #3d3c3c;
+}
+
+.popular-artists .card .item img{
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.popular-artists .item h4{
+    color: white;
+}
+
+.popular-artists .item p{
+    color: #8f8e8e;
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+.popular-artists .item p:hover{
+    text-decoration: underline;
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+.popular-artists .play-btn{
+    position: relative;     /relative to its normal position/
+}
+.popular-artists .play-btn i{
+    position: absolute;     /so that play button text ke upar ajaey/
+    background: #1db954;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 12px 15px;
+    right: 4px;     /Postioning of the play button/
+    top: -43px;
+    opacity: 0;     /to hide the play button/
+    transition-duration: 0.35s;
+}
+
+.popular-artists .card .item:hover .play-btn i{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+</style>
+<body>
+    <div class="sidebar">
+        
+        <div class="sidebar-menu"> <!--first section of sidebar-->
+            <div class="logo">
+                <a href=""><img src="images/logo-new.png" alt=""></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="">
+                        <span><i class="fa-solid fa-house"></i></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <span>Search</span>
+                    </a>
+
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-menu Library"> <!--second section of sidebar-->
+            <ul>
+                <li><a href="">
+                        <span><i class="fa-solid fa-book"></i></span>
+                        <span class="library">Your Library</span>
+                    </a></li>
+
+                <li>
+                    <div class="sidebar-scroll">
+                        <div class="create-playlist">
+                            <h4><b>Create your first playlist</b></h4>
+                            <p>It's easy, we'll help you</p>
+                            <button>Create Playlist</button>
+                        </div>
+
+                        <div class="create-playlist">
+                            <h4>Lets find some podcasts to follow</h4>
+                            <p>We'll keep you updated on new episodes</p>
+                            <button>Browse Podcasts</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="privacy">
+                <ul>
+                    <li>
+                        <a href="">Legal</a>
+                        <a href="">Safety&PrivacyCenter</a>
+                    </li>
+                    <li>
+                        <a href="">PrivacyPolicy</a>
+                        <a href="">Cookies</a>
+                        <a href="">About Ads</a>
+                    </li>
+                    <li>   
+                        <a href="">Accessibility</a>
+                    </li>
+                    <li>
+                        <a href="">Cookies</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="eng-btn">
+                <button>
+                        <span><i class="fa-solid fa-globe"></i></span>
+                        <span>English</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Main Section-->
+    <div class="main-section">
+        <!--navbar-->
+        <div class="top-navbar">
+            <div class="prev-btn">
+                <button><i class="fa-solid fa-angle-left"></i></button>
+                <button><i class="fa-solid fa-angle-right"></i></button>
+
+            </div>
+            <div class="login-btn">
+                <button class="sign-up">Sign Up</button>
+                <button class="login">Login</button>
+            </div>
+        </div>
+        <!--playlists-->
+
+        <div class="popular-artists">
+            <h2>Popular Artists</h2>
+            <div class="card">
+                <div class="item">
+                    <img src="images/Pritam.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Pritam</h4>
+                    <p>Artist</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Karan_Aujla.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Karan Aujla</h4>
+                    <p>Artist</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Arijit-Singh.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Arijit Singh</h4>
+                    <p>Artist</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Atif-Aslam.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Atif Aslam</h4>
+                    <p>Artist</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/_Shubh.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Shubh</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="spotify-playlist">
+            <h2>Popular Albums</h2>
+            <div class="card">
+                <div class="item">
+                    <img src="images/Umair.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>ROCKSTAR WITOUT A GUITAR</h4>
+                    <p>Umair</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Shubh.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Still Rollin</h4>
+                    <p>Shubh</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Karan-Aujla.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Making Memories</h4>
+                    <p>Karan Aujla, Ikka</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Love-Hotel.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>love hotel</h4>
+                    <p>leftovermax</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Jhol.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Jhol</h4>
+                    <p>Maanu, Annural Khalid</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="spotify-playlist">
+            <h2>Popular Radio</h2>
+            <div class="card">
+                <div class="item">
+                    <img src="images/radio-1.jpeg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Arijit Singh</h4>
+                    <p>With Neha Kakkar, Pritam, KK and more</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/radio-4.jpeg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Shubh Radio</h4>
+                    <p>With AP Dhillon, Gurinder Gill, Tegi...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/radio-3.jpeg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Nusrat Fateh Ali Khan</h4>
+                    <p>With Pbida Parveen, Atta Ullah Khan...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/radio-2.jpeg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Kaifi Khalil Radio</h4>
+                    <p>With Yashal Shahid, Azaan Sami Khan, Asi...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/radio-5.jpeg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Diljit  Dosanjh Radio</h4>
+                    <p>With Garry Sandhu, Ranjit Bawa, Amrinder...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="spotify-playlist">
+            <h2>Featured Charts</h2>
+            <div class="card">
+                <div class="item">
+                    <img src="images/Global-Charts.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Top Songs - Global</h4>
+                    <p>Your weekly update of the most played track...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Top-Songs-USA.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Top Songs - USA</h4>
+                    <p>Your weekly update of the most played track...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Top-50.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Top 50 - Global</h4>
+                    <p>Your daily update of the most played track...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Top-50-USA.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Top 50 - USA</h4>
+                    <p>Your daily update of the most played track...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/Viral-50.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Viral 50 - Global</h4>
+                    <p>Your daily update of the most played track...</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="spotify-playlist">
+            <h2>Spotify Playlists</h2>
+            <div class="card">
+                <div class="item">
+                    <img src="images/Throwback-Thursday.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Throwback Thursday</h4>
+                    <p>#SpotifyTBT this week will take you higher...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/All-Out-2020.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>All Out 2020s</h4>
+                    <p>The biggest songs of the 2020s. Cover: Doj...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/All-Out-2010.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>All-Out-2010s</h4>
+                    <p>The biggest songs of the 2010s. Cover: Kesha</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/All-Out-2000.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>All Out 2000s</h4>
+                    <p>The biggest songs of the 2000s. Cover: The...</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/All-Out-90.jpg" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>All Out 90s</h4>
+                    <p>The biggest songs of the 1990s. Cover:...</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer Section-->
+        <div class="footer-section">
+            <div class="footer">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <div>Company</div>
+                        <ul class="col-links">
+                            <li><a href="">About</a></li>
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">For the Record</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-column">
+                        <div>Communities</div>
+                        <ul class="col-links">
+                            <li><a href="">For Artists</a></li>
+                            <li><a href="">Developers</a></li>
+                            <li><a href="">Advertising</a></li>
+                            <li><a href="">Investors</a></li>
+                            <li><a href="">Vendors</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-column">
+                        <div>Useful links</div>
+                        <ul class="col-links">
+                            <li><a href="">Support</a></li>
+                            <li><a href="">Free mobile app</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-column">
+                        <div>Spotify Plans</div>
+                        <ul class="col-links">
+                            <li><a href="">Premium Individual</a></li>
+                            <li><a href="">Premium Duo</a></li>
+                            <li><a href="">Premium Family</a></li>
+                            <li><a href="">Premium Student</a></li>
+                            <li><a href="">Spotify Free</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="social-links">
+                    <div>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p class="copyright">&copy; 2024 Spotify AB</p>
+        </div>
+    </div>
+</body>
+</html>

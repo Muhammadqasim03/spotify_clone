@@ -1,0 +1,32 @@
+.form{
+    background-color: rgb(43, 40, 40);
+    height: 100vh;
+}
+.container-box{
+    position: relative; 
+    top: 4%;
+    background-color: black;
+    width: 40%;
+    height: 89vh;
+    justify-content: center;
+    text-align: center;
+    margin-left: 25%;
+    position: relative;
+     left: 5rem;
+    
+
+}
+
+.from-data img{
+    width: 7rem;
+    
+    
+}
+.from-data h2{
+    color: white;
+    font-size: xx-large;
+    font-weight: bolder;
+    /* padding-top: 5px; */
+
+    margin-left: 150px;
+}

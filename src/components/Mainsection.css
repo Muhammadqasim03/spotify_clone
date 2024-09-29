@@ -1,0 +1,84 @@
+.main-section {
+  background-color: black;
+  width: 100%;
+  height: calc(100vh - 70px);
+  color: wheat;
+  margin-top: 2px;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+}
+.PopularArtist h2{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    padding-top: 50px;
+}
+.btn-btn{
+  display: flex;
+  flex-direction: row;
+}
+.btn-btn button{
+  height: 40px;
+  width: 60px;
+ 
+  border-radius: 50px;
+  margin: 6px;
+  
+  color: white;
+  background-color: rgb(80, 75, 75);
+}
+.play-music{
+  background-color: #1ed760;
+  width: 50px;
+  height: 3rem;
+  border-radius: 50%;
+  display: none; 
+}
+
+.play-music img{
+  height:  30px;
+   width:  2rem;
+  padding: 10px;
+   font-size: small;
+ 
+}
+.item {
+  position: relative;
+}
+.item:hover .play-music{
+  position: absolute;
+  bottom: 4rem;
+  left: 8em;
+  display: block;
+}
+
+.imggg {
+  border: 2px solid coral;
+  width: 100%;
+  border-radius: 50%;
+}
+.card {
+  display: flex;
+  
+}
+
+
+
+.Popularalbum h2{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+  }
+  
+  
+  .imgg {
+    
+    width: 100%;
+ 
+  }
+  .card {
+    display: flex;
+  }
+ 
